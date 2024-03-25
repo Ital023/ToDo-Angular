@@ -10,8 +10,8 @@ export class AppComponent {
   inputValue = "";
 
 
-  toDoList: any = [
-
+  toDoList: any= [
+    
   ]
 
   booleanLengthToDoList(){
@@ -31,9 +31,14 @@ export class AppComponent {
     const item = {
       name: itemName
     }
+    
 
     this.toDoList.push(item);
 
+  }
+
+  clearTask(valueEmitted: boolean,item:any){
+    this.toDoList.pop(item);
   }
   
 }

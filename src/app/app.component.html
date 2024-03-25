@@ -15,5 +15,6 @@
   <app-item
   *ngFor="let item of toDoList"
   [itemName]="item.name"
+  (clearClick)="clearTask($event,item)"
   ></app-item>
 </div>
