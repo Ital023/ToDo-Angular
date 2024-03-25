@@ -70,6 +70,10 @@
         width: 350px;
         padding-inline: 1rem;
         width: 100%;
+
+        .container--input{
+            min-width: 360px;
+        }
     }
     .list{
         padding-inline: 1rem;

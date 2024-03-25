@@ -32,8 +32,9 @@ export class AppComponent {
       name: itemName
     }
     
-
-    this.toDoList.push(item);
+    if(item.name != ""){
+      this.toDoList.push(item);
+    }    
 
   }
 
