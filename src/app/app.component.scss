@@ -68,6 +68,12 @@
 @media (max-width: 520px) {
     .container{
         width: 350px;
+        padding-inline: 1rem;
+        width: 100%;
+    }
+    .list{
+        padding-inline: 1rem;
+
     }
 }
 
