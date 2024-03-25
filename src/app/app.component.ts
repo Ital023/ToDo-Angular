@@ -7,10 +7,33 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  toDoList = [
-    {name:'Fazer um projeto em spring boot'},
-    {name:'Estudar angular'},
-    {name:'Realizar atividades da faculdade'},
+  inputValue = "";
+
+
+  toDoList: any = [
+
   ]
+
+  booleanLengthToDoList(){
+    if(this.toDoList.length === 0){
+      return false;
+    }
+    return true;
+  }
+
+  attInput(input: string){
+    this.inputValue = input
+    console.log(this.toDoList.length);
+    
+  }
+
+  addList(itemName:string){
+    const item = {
+      name: itemName
+    }
+
+    this.toDoList.push(item);
+
+  }
   
 }

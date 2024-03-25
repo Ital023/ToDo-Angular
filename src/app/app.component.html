@@ -5,21 +5,15 @@
   </div>
   
   <div class="container--input">
-    <input type="text">
-    <button>save</button>
+    <input #meuInput (keyup)="attInput(meuInput.value)" type="text" placeholder="Digite a tarefa...">
+    <button (click)="addList(inputValue)" >save</button>
   </div>
 
 </div>
 
-<div class="list">
-  <app-item></app-item>
-  <app-item></app-item>
-
-  <app-item></app-item>
-
-  <app-item></app-item>
-
-  <app-item></app-item>
-
-  
+<div class="list" *ngIf="booleanLengthToDoList()">
+  <app-item
+  *ngFor="let item of toDoList"
+  [itemName]="item.name"
+  ></app-item>
 </div>
