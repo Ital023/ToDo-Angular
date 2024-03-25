@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  toDoList = [
+    {name:'Fazer um projeto em spring boot'},
+    {name:'Estudar angular'},
+    {name:'Realizar atividades da faculdade'},
+  ]
+  
 }
