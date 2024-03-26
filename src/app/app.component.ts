@@ -10,9 +10,13 @@ export class AppComponent {
   inputValue = "";
 
 
-  toDoList: any= [
+  toDoList: any = [
     
   ]
+
+  // teste = [
+  //   {}
+  // ]
 
   booleanLengthToDoList(){
     if(this.toDoList.length === 0){
@@ -38,8 +42,9 @@ export class AppComponent {
 
   }
 
-  clearTask(valueEmitted: boolean,item:any){
-    this.toDoList.pop(item);
+  clearTask(itemIndex:number){
+    const indiceRemover = itemIndex;
+    this.toDoList.splice(indiceRemover, 1);
   }
   
 }

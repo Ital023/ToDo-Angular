@@ -13,8 +13,8 @@
 
 <div class="list" *ngIf="booleanLengthToDoList()">
   <app-item
-  *ngFor="let item of toDoList"
+  *ngFor="let item of toDoList;let i = index"
+  [itemIndex]="i"
   [itemName]="item.name"
-  (clearClick)="clearTask($event,item)"
-  ></app-item>
+  (clearClick)="clearTask($event)"></app-item>
 </div>

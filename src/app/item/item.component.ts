@@ -8,10 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ItemComponent {
   @Input({required:true}) itemName: string = "";
 
-  @Output("clearClick") buttonClearClikedEmitter = new EventEmitter<true>();
+  @Input({required:true}) itemIndex: number | undefined = undefined;
+
+
+  @Output("clearClick") buttonClearClikedEmitter = new EventEmitter<number>();
 
   onClearButtonClick(){
-    console.log("funcionando emmiter");
-    this.buttonClearClikedEmitter.emit(true);
+    this.buttonClearClikedEmitter.emit(this.itemIndex);    
   }
 }
